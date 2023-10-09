@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Env ~ Forest Detail</title>
+</head>
+
+
+<body>
+    <h1>Old Growth Forest Test Site</h1>
+    <!-- Placeholder for the LWC -->
+    <div id="lwcContainer"></div>
+    <script src="https://oldgrowthforestnetwork--dev.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+    <!-- Initialize the LWC -->
+    <script>
+        $Lightning.use("c:ForestTableAuraApp", function() {
+            $Lightning.createComponent("c:ForestTableComponent", {}, "lwcContainer", function(component) {
+                console.log("Ligtning out Connected")
+            });
+        },
+        "https://oldgrowthforestnetwork--dev.sandbox.lightning.force.com/ForestTableAuraApp/",
+        );
+    </script>
+</body>
+</html>
