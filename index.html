@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Env ~ Forest Detail</title>
-    
+    <title>Test Env ~ Forest Detail</title>    
+    <style>
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
-
-
 <body>
     <h1>Old Growth Forest Test Site</h1>
     <!-- Placeholder for the LWC -->
-    <div id="lwcContainer"></div>
-    <script src="https://oldgrowthforestnetwork--dev.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-    <!-- Initialize the LWC -->
-    <script>
-        const appName = 'c:ForestTableAuraApp';
-        const componentName = 'c:forestsTableComponent';
-        const targetElement = "lwcContainer";
-        const componentAttributes = {};
-        
-        $Lightning.use(
-            appName,
-            function () {
-                $Lightning.createComponent(
-                    componentName,
-                    componentAttributes,
-                    targetElement,
-                    function(component) {
-                        console.log("Lightning out Connected")
-                    }
-                )
-            },
-        );
-    </script>
+    <h2>Code for State List</h2>
+    <h3>State</h3>
+    <hr>
+    <iframe src="https://oldgrowthforestnetwork--dev.sandbox.my.salesforce-sites.com/states?stateId=a3VEc0000001Z0XMAU" frameborder="0"></iframe>
+    <h3>State and Community</h3>
+    <hr>
+    <iframe src="https://oldgrowthforestnetwork--dev.sandbox.my.salesforce-sites.com/states?stateId=a3VEc0000001Z0XMAU&forestType=Community" frameborder="0"></iframe>
+    <h3>State and Network</h3>
+    <hr>
+    <iframe src="https://oldgrowthforestnetwork--dev.sandbox.my.salesforce-sites.com/states?stateId=a3VEc0000001Z29MAE&forestType=Network" frameborder="0"></iframe>
+    <h3>Forest Detail</h3>
+    <hr>
+    <iframe src="https://oldgrowthforestnetwork--dev.sandbox.my.salesforce-sites.com/forests?forestId=001Ec00000BKhldIAD" frameborder="0"></iframe>
 </body>
+
 </html>
